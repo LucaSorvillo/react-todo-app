@@ -1,0 +1,62 @@
+
+/** Il file tsconfig.json per un progetto frontend scritto in TypeScript (ad esempio con React o Angular)
+definisce come TypeScript deve compilare il codice. La configurazione dipende dal framework e dalle esigenze
+del progetto. **/
+
+{
+	"compilerOptions": {
+		
+		/* serve all'ide per localizzare files, il necessario si trova in vite.config.ts */
+		"baseUrl": "./src",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		
+		/* todo Typescript */
+		"target": "ES2022", /* todo ES2020 -> ES2022 */
+		"useDefineForClassFields": true,
+		"lib": [
+			"ES2022", /* todo ES2020 -> ES2022: perchè dà errore su Object.hasOwn() */
+			"dom",
+			"dom.iterable",
+			// "ES6" /* todo tsyringe */
+		],
+		"module": "esnext",
+		"skipLibCheck": true,
+		
+		/* todo Typescript bundler mode */
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
+		
+		/* todo Typescript linting */
+		"strict": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		
+		/* todo Mix Javascript/Typescript */
+		"allowJs": true,
+		"checkJs": false,
+		
+		/* todo DI: tsyringe */
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"types": ["reflect-metadata"],
+		
+		/* todo Suppress errors */
+		"noImplicitAny": false,
+		"noUnusedLocals": false,
+		
+		/* todo More from tsconfig.node.json */
+		"composite": true,
+		"allowSyntheticDefaultImports": true,
+		
+	},
+	
+	"include": ["./src"],
+	"exclude": ["node_modules", "dist"],
+	
+}
