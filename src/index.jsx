@@ -6,11 +6,11 @@ import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import './styles/GlobalStyles.css';
-import { store } from './app/store';
+import { store } from 'store/store';
 import { Toaster } from 'react-hot-toast';
-import AppContent from './components/AppContent';
-import AppHeader from './components/AppHeader';
-import PageTitle from './components/PageTitle';
+import AppContent from 'components/AppContent.jsx';
+import AppHeader from 'components/AppHeader.jsx';
+import PageTitle from 'components/PageTitle.jsx';
 import styles from './styles/modules/app.module.scss';
 
 function App() {
