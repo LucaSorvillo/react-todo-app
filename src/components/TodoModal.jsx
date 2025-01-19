@@ -5,9 +5,9 @@ import { useDispatch } from 'react-redux';
 import { AnimatePresence, motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { format } from 'date-fns';
-import { addTodo, updateTodo } from 'store/todoSlice.js';
-import styles from '../styles/modules/modal.module.scss';
-import Button from 'components/Button.jsx';
+import { addTodo, updateTodo } from '@/store/todoSlice.js';
+import styles from '@/styles/modules/modal.module.scss';
+import Button from '@/components/Button.jsx';
 
 const dropIn = {
   hidden: {
